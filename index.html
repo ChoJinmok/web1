@@ -5,33 +5,34 @@
     <meta charset="utf-8">
     <link rel="stylesheet" href="style.css">
     <script>
-      function nightDayHandler(self) {
-        var target = document.querySelector('body');
-          if(self.value === 'night') {
-            target.style.backgroundColor = 'black';
-            target.style.color = 'white';
-            self.value = 'day';
-
-            var aList = document.querySelectorAll('a');
-            var i = 0;
-            while(i < aList.length) {
-              aList[i].style.color = 'powderblue';
-              i = i + 1;
-            }
-          }
-          else {
-            target.style.backgroundColor = 'white';
-            target.style.color = 'black';
-            self.value = 'night';
-
-            var aList = document.querySelectorAll('a');
-            var i = 0;
-            while(i < aList.length) {
-              aList[i].style.color = 'blue';
-              i = i + 1;
-            }
-          }
+      function setLinkColor(color) {
+        var aList = document.querySelectorAll('a');
+        var i = 0;
+        while(i < aList.length) {
+          aList[i].style.color = color;
+          i = i + 1;
         }
+      }
+
+      function setBodyColor(bgColor, color) {
+        document.querySelector('body').style.backgroundColor = bgColor;
+        document.querySelector('body').style.color = color;
+      }
+
+      function nightDayHandler(self) {
+        if(self.value === 'night') {
+          self.value = 'day';
+
+          setBodyColor('black','white');
+          setLinkColor('powderblue');
+        }
+        else {
+          self.value = 'night';
+
+          setBodyColor('white', 'black');
+          setLinkColor('blue');
+        }
+      }
     </script>
   </head>
   <body>
