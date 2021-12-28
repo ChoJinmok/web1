@@ -4,36 +4,7 @@
     <title>WEB - Welcome</title>
     <meta charset="utf-8">
     <link rel="stylesheet" href="style.css">
-    <script>
-      function setLinkColor(color) {
-        var aList = document.querySelectorAll('a');
-        var i = 0;
-        while(i < aList.length) {
-          aList[i].style.color = color;
-          i = i + 1;
-        }
-      }
-
-      function setBodyColor(bgColor, color) {
-        document.querySelector('body').style.backgroundColor = bgColor;
-        document.querySelector('body').style.color = color;
-      }
-
-      function nightDayHandler(self) {
-        if(self.value === 'night') {
-          self.value = 'day';
-
-          setBodyColor('black','white');
-          setLinkColor('powderblue');
-        }
-        else {
-          self.value = 'night';
-
-          setBodyColor('white', 'black');
-          setLinkColor('blue');
-        }
-      }
-    </script>
+    <script src="colors.js"></script>
   </head>
   <body>
     <h1><a href="index.html">WEB</a></h1>
