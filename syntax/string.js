@@ -1,0 +1,3 @@
+// "" '' 둘다가능
+console.log('1'+'1'); // + 는 산술연산자 이면서 결합연산자 이기도 하다. -> 문자열에서는 결합연산자
+console.log("This property returns the number of code units in the string. UTF-16, the string format used by JavaScript, uses a single 16-bit code unit to represent the most common characters, but needs to use two code units for less commonly-used characters, so it's possible for the value returned by length to not match the actual number of characters in the string.".length);
