@@ -1,7 +1,12 @@
+// import 알아보기
+// import { createServer } from "http";
+// import { readFileSync } from "fs";
+
 const http = require("http");
 const fs = require("fs");
 const app = http.createServer((request, response) => {
   let url = request.url;
+  console.log(url);
   if (url == "/") {
     url = "/index.html";
   }
